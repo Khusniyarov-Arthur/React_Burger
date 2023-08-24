@@ -4,11 +4,13 @@ import "normalize.css";
 import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./store/index.js";
+import { ModalDelivery } from "./components/ModalDelivery/ModalDelivery.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     <Provider store={store}>
       <App />
+      <ModalDelivery />
     </Provider>
   </>
 );
