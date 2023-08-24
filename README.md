@@ -1,8 +1,21 @@
-# React + Vite
+### Описание проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сервис заказа бургеров.
 
-Currently, two official plugins are available:
+Приложение написано на React, Redux Toolkit, CSS Modules, React Hooks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Функционал: 
+
+  - Корзина
+  -	Расчет стоимости
+  -	Отправка заказа на сервер
+  
+### Установка
+
+- Клонировать репозиторий: git clone адрес репозитория
+- Перейти в созданную папку
+- Установить все зависимости: npm i
+- Запустить проект: npm run dev
+
+- Файлы для локального сервера расположены в папке api_your_meal-master.
+- Для запуска локального сервера нужно открыть парку через кончоль и набрать коменду node index.
