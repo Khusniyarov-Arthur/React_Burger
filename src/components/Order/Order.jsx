@@ -1,16 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
 import { OrderGoods } from "../OrderGoods/OrderGoods";
 import style from "./Order.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { orderRequestAsync } from "../../store/order/orderSlice";
 import { openModal } from "../../store/modalDelivery/modalDeliverySlice";
-
-// const orderList = ["Супер сырный", "Картошка фри", " Жгучий хот-дог"];
 
 export const Order = () => {
   const { totalPrice, totalCount, orderList, orderGoods } = useSelector(
     (state) => state.order
   );
+
+  const [order, setOrder] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -19,9 +19,16 @@ export const Order = () => {
   }, [orderList.length]);
 
   return (
-    <div className={style.order}>
+    <div className={order ? style.order_open : style.order}>
       <section className={style.wrapper}>
-        <div className={style.header} tabIndex="0" role="button">
+        <div
+          className={style.header}
+          onClick={() => {
+            setOrder(true);
+          }}
+          tabIndex="0"
+          role="button"
+        >
           <h2 className={style.title}>Корзина</h2>
 
           <span className={style.count}>{totalCount}</span>
@@ -54,7 +61,14 @@ export const Order = () => {
 
           <div className={style.apeal}>
             <p className={style.text}>Бесплатная доставка</p>
-            <button className={style.close}>Свернуть</button>
+            <button
+              className={style.close}
+              onClick={() => {
+                setOrder(false);
+              }}
+            >
+              Свернуть
+            </button>
           </div>
         </div>
       </section>
