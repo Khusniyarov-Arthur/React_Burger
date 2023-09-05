@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import style from "./Navigation.module.css";
-import { Container } from "../container/container";
+import { Container } from "../Container/Container";
 import { useDispatch, useSelector } from "react-redux";
 import {
   categoryRequestAsync,
