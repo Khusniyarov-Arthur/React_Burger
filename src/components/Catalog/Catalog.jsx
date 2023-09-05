@@ -4,7 +4,7 @@ import { Order } from "../Order/Order";
 import style from "./Catalog.module.css";
 import { useEffect } from "react";
 import { productRequestAsync } from "../../store/product/productSlice";
-import { Container } from "../container/container";
+import { Container } from "../Container/Container";
 
 export const Catalog = () => {
   const { products } = useSelector((state) => state.product);
