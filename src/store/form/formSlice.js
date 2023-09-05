@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { closeModal } from "../modalDelivery/modalDeliverySlice";
 import { clearOrder } from "../order/orderSlice";
-// import { clearOrder } from "../order/orderSlice";
 
 const initialState = {
   name: "",
